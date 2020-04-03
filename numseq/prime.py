@@ -1,21 +1,17 @@
-"""demo"""
-
 def primes(n):
-    numbers = set(range(n, 1, -1))
-    primes = []
-    while numbers:
-        p = numbers.pop()
-        primes.append(p)
-        numbers.difference_update(set(range(p*2, n+1, p)))
-    return primes
+    '''Returns a list of all prime numbers less than n'''
+    prime = []
+    for num in range(2, n + 1):
+        for i in range(2, int(num**0.5)+1):
+            if num % i == 0:
+                break
+        else:
+            prime.append(num)
+    return prime
+
 
 def is_prime(m):
-    if m == 2 or m == 3:
+    '''Returns a boolean indicating whether `m` is a prime number'''
+    if m in primes(m):
         return True
-    if m % 2 == 0 or m < 2:
-        return False
-    for m in range(3, int(m ** 0.5) + 1, 2):
-        if m % 1 == 0:
-            return False
-    return True
-print(primes(5003))
+    return False
