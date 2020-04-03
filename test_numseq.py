@@ -127,7 +127,7 @@ class TestCodeQuality(unittest.TestCase):
         """Test if prime number generator is inefficient"""
         # This will generate 78498 prime numbers in about 1.5 seconds
         prime_time = timeit.Timer(
-            lambda: self.prime.primes(1000000)
+            lambda: self.prime.primes(100000)
             ).repeat(number=1, repeat=1)[0]
         hint = (
             'The primes(n) function took {} seconds to run,\n'
