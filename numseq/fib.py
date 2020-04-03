@@ -1,6 +1,6 @@
 
 def fib(n):
-    """returns the nth Fibonacci number"""
+    """"returns the nth Fibonacci number"""
     old, new = 0, 1
     if n == 0:
         return 0
