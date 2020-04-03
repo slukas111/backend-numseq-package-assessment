@@ -1,4 +1,5 @@
-def primes(num):
+
+def primes(n):
     """Returns a list of all prime numbers less than n"""
     prime = []
     for num in range(2, n + 1):
@@ -7,12 +8,8 @@ def primes(num):
                 break
         else:
             prime.append(num)
-    # return prime
-    # prime_list = []
-    # for number in range(num):
-    #     if is_prime(number):
-    #         prime_list.append(number)
-    # return prime_list
+    return prime
+
 
 
 
